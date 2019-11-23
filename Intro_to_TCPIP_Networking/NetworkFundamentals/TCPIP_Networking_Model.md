@@ -38,6 +38,48 @@ A document could define the __voltage__ and __current levels__ on a particular _
 
 * Finally, TCP/IP win at the last of 1990s
 
+## Overview of the TCP/IP Networking Model
+
+* The TCP/IP model both __defines__ and __references__ a large collection of protocols that allows computer to comunicate .
+
+* TCP/IP uses documents called RFC(Request For Comments)
+
+* TCP/IP dont override the contents that other institutes create. For example, the Ethernet LANs protocol was defined by IEEE.
+
+### Layers
+
+We have 5 layers in TCP/IP Networking model:
+
+* Application:
+
+    + HTTP, SMTP, POP3
+    
+    + apps that needs to __send__ and __receive__ data.
+
+* Transport:
+
+    + TCP, UDP
+
+    + apps that need to __send__ and __receive__ data.
+
+* Network:
+
+    + IP, ICMP
+
+    + __Delivering__ data over the __entire path__ from the original sending computer to the final destination computer.
+
+* Data link:
+
+    + Ethernet, 802.11 Wi-Fi
+
+    + __Send__ data over one type of __physical link__
+
+* Physical:
+
+    + Ethernet, 802.11 Wi-Fi
+
+    + __How__ to transmit bits of data over each individual __link__
+
 ## Annotation
 
 * SNA -> Systems Network Architecture
@@ -47,3 +89,9 @@ A document could define the __voltage__ and __current levels__ on a particular _
 * OSI -> Open System Interconection
 
 * DoD -> Departement of Defense
+
+* RFC -> Request For Comments
+
+* IEEE -> Institute of Electrical and Electronic Engineers
+
+
