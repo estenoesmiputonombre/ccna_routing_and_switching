@@ -70,7 +70,7 @@ We have 5 layers in TCP/IP Networking model:
 
 * Data link:
 
-    + Ethernet, 802.11 Wi-Fi
+    + Ethernet, 802.11 Wi-Fi, PPP
 
     + __Send__ data over one type of __physical link__
 
@@ -94,4 +94,18 @@ We have 5 layers in TCP/IP Networking model:
 
 * IEEE -> Institute of Electrical and Electronic Engineers
 
+* HTTP -> HyperText Transfer Protocol
 
+* SMTP -> Simple Mail Transfer Protocol
+
+* POP3 -> Post Office Protocol
+
+* TCP -> Transmission Control Protocol
+
+* UDP -> User Datagram Protocol
+
+* IP -> Internet Protocol
+
+* ICMP -> Internet Control Message Protocol
+
+* PPP -> Point-to-Point Protocol
