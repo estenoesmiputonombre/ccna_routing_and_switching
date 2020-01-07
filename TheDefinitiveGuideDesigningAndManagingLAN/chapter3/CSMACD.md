@@ -30,6 +30,12 @@ Because of the multiple access property, all Ethernet interfaces have the same p
 
 __Random retransmission__ time that each Interface will choose to resend its __frames__ after the __collision__.
 
+The expanding __backoff__ process, formally known as __truncated exponential backoff__
+
+## Loop
+
+Only after __16__ consecutive __collisions__ for a given transmission attempt will the interface finally discard the Ethernet frame.
+
 ## Nomenclature
 
 * Carrier signal - Historically, it is defined as a __continuous constant-frequency signal__, such as the one used to carry the modulated signal in an __AM__ or __FM__ radio system. There is no such continuous carrier signal in Ethernet; instead, "carrier" in Ethernet simple means the __presence of traffic on the network__.
