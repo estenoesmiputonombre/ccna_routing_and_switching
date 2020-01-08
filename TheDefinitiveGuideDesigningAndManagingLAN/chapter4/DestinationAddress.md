@@ -19,3 +19,15 @@ The __second bit__ of the destination address is used to distinguish __Locally__
 * 0 -> It is a __Global administered address__. It was assigned by the manufacturer. (__DIX Ethernet__ address are always globally administered)
 
 * 1 -> It is a __Locally administered address__ (for some reason). It is rarely used on Ethernet systems.
+
+## Understanding physical address
+
+48 bits -> 12 decimal values like aa-bb-cc-dd-ee-ff
+
+The octect order of transmission on the Ethernet is from the __leftmost__ octet (as written or displayed) to the __rightmost__ order.
+
+The actual transmission order of bits within the octet, however, goes from the __least significant__ bit of the octet through to the __most significant__ bit.
+
+F0-2E-15-6C-77-9B -> 0000 1111 0111 0100 1010 1000 0011 0110 1110 1110 1101 1001
+
+this MAC address is a unicast address because the first bit sent in the channel is 0.
