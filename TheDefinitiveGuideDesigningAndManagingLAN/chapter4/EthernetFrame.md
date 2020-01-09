@@ -18,6 +18,8 @@ A later version of the IEEE 802.3 standard was changed to define this field of t
 
 DIX Basic Frame = Min 64 Bytes, Max 1518 Bytes + preamble.
 
+This Ethernet frame are always Global MAC addresses
+
 | Name | Size |
 | ---- | ---- |
 | Preamble | 8 Bytes |
@@ -37,7 +39,7 @@ IEEE 802.3 Basic Frame = Min 64 Bytes, Max 1518 Bytes + preamble
 | Preamble | 7 Bytes |
 | SFD(Start Frame Delimiter) | 1 Bytes |
 | I/G(Individual/Group address) | 1 bit |
-| G/L(Global/Local administered bit) | 1bit |
+| G/L(Global/Local administered bit) | 1 bit |
 | Destination address | 46 bits |
 | Source address | 6 Bytes |
 | Length/Type | 2 Bytes |
