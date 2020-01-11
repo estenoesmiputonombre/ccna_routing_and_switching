@@ -1,0 +1,56 @@
+
+enable                                  # Get access to privileged user
+
+configure terminal                      # Get access to congfigure the device
+
+hostname cisco                          # This is used to change the name of the device
+
+ip domain-name router.com               # This is used to connect using ssh to generate the keys
+
+banner motd # Message #                 # The # is the separator of the message
+
+line console 0                          # We enter to modify the console port number 0
+
+logging synchronous                     # This will allow us not to break the keyboard xdd
+
+password thePassword                    # This is the password when the device start using the console port
+
+logging                                 # This is used to allow the logging in the device using the password using the console port 0
+
+service password-encryption             # This is used to encrypt the password so when we run the command show running-config, the password will be encrypted
+
+enable secret passwordPrivileg          # This is used to set and encrypt the password of the privileged mode.
+
+interface FastEthernet0/0               # Enter to the interface FastEthernet0/0 to modify it and up it
+
+ip address 10.0.0.1 255.255.255.128     # It set the address gateway to the 10.0.0.1 and the net mask to 255.255.255.128
+
+no shutdown                             # It ups the interface to be useful
+
+exit                                    # It exists the interface and enters in the configuration mode
+
+interface FastEthernet0/1               # the same
+
+ip address 10.0.0.129 255.255.255.128   # Sets the gateway address to 10.0.0.129 and the net mask 255.255.255.128
+
+no shutdown                             # The same
+
+exit
+
+crypto key generate rsa general-keys    # This will generate keys corresponding to the ip domain-name that we setted up before. We are using 1024 bits
+
+ip ssh version 2                        # We enable the vesion of the ssh.
+
+username tsuki secret cisco             # We set up a username and a secret password to the ssh connection.
+
+line vty 0 4                            # We will set up connections from 0 to 4(5 conections from a total of 808)
+
+login local                             # this is used to allow to log using the credentials that we setted up before
+
+logging synchronous                     # you know
+
+exit
+
+exit
+
+copy running-config startup-config      # This is used to save the actual configuration that we have setted up
