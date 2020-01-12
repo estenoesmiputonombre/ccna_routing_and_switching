@@ -45,6 +45,8 @@ username tsuki secret cisco             # We set up a username and a secret pass
 
 line vty 0 4                            # We will set up connections from 0 to 4(5 conections from a total of 808)
 
+transport input ssh                     # TDefine the protocol ssh for the line vty from 0 to 5
+
 login local                             # this is used to allow to log using the credentials that we setted up before
 
 logging synchronous                     # you know

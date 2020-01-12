@@ -19,3 +19,6 @@ If we type the letter e and then ? like 'e?' this will display all the commands 
 * We wil use the __reload__ command to reload the router and start with a configuration of the startup-config which is nothing.
 
 * If we want to get all the messages from the router when using an ssh session, we should use the command __terminal monitor__ from the privileged mode.
+
+* We could use the comnmand __ipv6 unicast-routing__ to enable routing IPv6 messages, this will allow us to create a IPv6 routing table. Then
+use the command __interface FastEthernet0/0__ to enter in the FastEthernet port 0 and __ipv6 enable__. Finally set the ipv6 using __ipv6 address addressIPv6__
