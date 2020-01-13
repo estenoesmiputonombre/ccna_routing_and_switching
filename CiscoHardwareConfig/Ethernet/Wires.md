@@ -44,3 +44,33 @@ We use the Shielded Twisted-Pair when there are a lot of noise (EMI or RFI)
 
 __EMI__ is __Electromagnetic Interference__
 __RFI__ is __Radio-Frequency Interference__
+
+## Coaxial cable
+
+* Cable TV / Cable internet
+
+    + We use the __RG-6__ cabling
+
+    + __F-type__ connector
+
+* Antenna connections (we will see this in wireless access points for the antennas that connect to WAP)
+
+    + __LMR-200__
+
+    + __LMR-400__
+
+    + __LMR-900__
+
+    + Many connector options
+
+## Serial Cabling
+
+* __V.35__ cables
+
+    + Several connector types.
+
+* __DS1__ cable
+
+    + Twisted pair cable
+
+    + RJ-45
