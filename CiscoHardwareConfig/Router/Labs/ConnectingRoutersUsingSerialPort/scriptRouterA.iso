@@ -1,0 +1,75 @@
+enable
+
+configure terminal
+
+hostname RouterA
+
+ip domain-name routera.com
+
+no ip domain-lookup
+
+banner motd # Welcome to the RouterA #
+
+banner login # Authorized users only #
+
+service password-encryption
+
+enable secret cisco
+
+line console 0
+
+password cisco
+
+login
+
+logging synchronous
+
+line aux 0
+
+password cisco
+
+login
+
+exit
+
+crypto key generate rsa general-keys
+
+    1024
+
+ip ssh version 2
+
+username tsuky password cisco
+
+line vty 0 4
+
+transport input ssh
+
+login local
+
+exit
+
+interface Serial 0/0/0
+
+ip address 10.0.0.1 255.255.255.252
+
+no shutdown
+
+exit
+
+interface Serial 0/1/0
+
+ip address 10.0.0.5 255.255.255.252
+
+no shutdown
+
+exit
+
+router rip
+
+network 10.0.0.0
+
+network 10.0.0.4
+
+passive-interface FastEthernet0/0
+
+timers basic 60 360 360 420

@@ -1,0 +1,38 @@
+
+enable
+
+configure terminal
+
+banner motd # Welcome to this awesome router #
+
+banner login # Only authorized users #
+
+no ip domain-lookup
+
+ip domain-name domainName.com
+
+hostname router
+
+enable secret cisco
+
+service password-encryption
+
+line console 0
+
+password cisco
+
+login
+
+logging synchronous
+
+line aux 0
+
+password cisco
+
+login
+
+line vty 0 4
+
+password cisco # We can use telnet or ssh protocol
+
+login
