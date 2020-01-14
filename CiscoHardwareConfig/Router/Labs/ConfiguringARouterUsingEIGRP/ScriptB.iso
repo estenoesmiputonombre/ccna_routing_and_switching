@@ -1,0 +1,55 @@
+enable
+
+configure terminal
+
+banner motd # Welcome to the router B #
+
+banner login # Authorized users only #
+
+no ip domain-lookup
+
+service password-encryption
+
+enable secret cisco
+
+line console 0
+
+password cisco
+
+login
+
+logging synchronous
+
+line aux 0
+
+password cisco
+
+login
+
+line vty 0 4
+
+password cisco
+
+login
+
+exit
+
+interface Serial 0/0/0
+
+ip address 10.0.0.2 255.255.255.252
+
+no shutdown
+
+exit
+
+interface FastEthernet 0/0
+
+ip address 192.168.20.1 255.255.255.0
+
+exit
+
+router eigrp 101
+
+network 10.0.0.0
+
+network 192.168.20.0
